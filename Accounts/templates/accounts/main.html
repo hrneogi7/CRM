@@ -19,7 +19,58 @@
 	{% endblock %}
     </div>
 	<hr>
-	<h5>Our footer</h5>
+	<style>
+		footer {
+			grid-row:3/4;
+			box-sizing: border-box;
+		}
+
+		.footer {
+			width: 100%;
+			align-items: center;
+			background-color: #343A40;
+			color: #eee;
+			padding: 16px 16px;
+		}
+		.creator-name {
+			display: block;
+			text-align: center;
+			font-size: 1.2em;
+			margin-bottom: 1em;
+		}
+
+		.footer-menu{
+			display:grid;
+			grid-template-columns: repeat(auto-fit, minmax(33%,1fr));
+			place-items: center;
+		}
+
+		.footer-link{
+			font-size: 1.2em;
+			list-style-type: none;
+			color: #aaa;
+		}
+
+		.footer-link:hover {
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+	<footer>
+		<div class="footer bg-dark">
+			<div class="creator-name">
+				CRM Website created by Harsh Agarwal, Hrithik Neogi and Ishika Agarwal.
+			</div>
+			<nav class="footer-menu">
+				<a class="footer-link" href="{% url 'home' %}">Dashboard</a>
+				<a class="footer-link" href="#" onclick="alert('Just For Show')">About Us</a>
+				<a class="footer-link" href="#" onclick="alert('Just For Show')">Contact</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+
+</html>
 	
 </body>
 
